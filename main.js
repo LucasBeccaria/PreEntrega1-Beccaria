@@ -5,7 +5,7 @@ console.log("Hola"); }
 
 let usuario = prompt("Ingrese el usuario");
 
-while (usuario !== "jose") {
+while (usuario !== "Beccaria") {
   alert("usuario incorrecto");
   usuario = prompt("Ingrese el usuario");
 }
