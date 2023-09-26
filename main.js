@@ -1,8 +1,3 @@
-let repetir
-
-while(repetir){
-console.log("Hola"); }
-
 let usuario = prompt("Ingrese el usuario");
 
 while (usuario !== "Beccaria") {
@@ -12,20 +7,32 @@ while (usuario !== "Beccaria") {
 
 alert("bienvenido");
 
-let nota1=parseInt(prompt("ingrese nota1"))
-let nota2=parseInt(prompt("ingrese nota2"))
-let nota3=parseInt(prompt("ingrese nota3"))
+function calculadora(num1, num2, operacion) {
+   switch (operacion) {
+     case "+":
+       return num1 + num2;
+       break;
 
-let promedio=(nota1+nota2+nota3)/3
-parseInt(promedio)
+     case "-":
+       return num1 - num2;
+       break;
 
-if(promedio>=0 && promedio<=7){
-    document.write(`lo siento estas desaprobado ${promedio}`)
-}
-else if(promedio>=7 && promedio<=10){
-    document.write(`felicidades estas aprobado ${promedio}`)
-}
-else{
-    alert("ingresaste una nota fuera de rango")
-}
+     case "*":
+       return num1 * num2;
+       break;
 
+     case "/":
+       return num1 / num2;
+       break;
+
+     default:
+       return "Operacion no identificada";
+       break;
+   }
+ }
+
+ let numeroUno = Number(prompt("Ingrese el numero uno"));
+ let numeroDos = Number(prompt("Ingrese el numero dos"));
+ let operacion = prompt("Ingrese la operación");
+ let resultado = calculadora(numeroUno, numeroDos, operacion);
+ alert(`${numeroUno} ${operacion} ${numeroDos} = ${resultado}`)
